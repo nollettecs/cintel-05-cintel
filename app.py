@@ -26,7 +26,7 @@ from ipyleaflet import Map
 from faicons import icon_svg
 
 # Theme of Shiny
-shinyswatch.theme.sketchy()
+shinyswatch.theme.darkly()
 
 # --------------------------------------------
 # Shiny EXPRESS VERSION
@@ -184,7 +184,16 @@ with ui.card():
             y="temp",
             title="Temperature Readings with Regression Line",
             labels={"temp": "Temperature (°C)", "timestamp": "Time"},
-            color_discrete_sequence=["black"], color='temp', )
+            color_discrete_sequence=["black"],)
+            
+            fig.update_layout(
+                    xaxis=dict(gridcolor='lightblue'),
+                    yaxis=dict(gridcolor='lightblue'))
+            fig.update_layout(
+                    plot_bgcolor='darkgrey',
+                    paper_bgcolor='lightgrey')
+                          
+
             
             # Linear regression - we need to get a list of the
             # Independent variable x values (time) and the
