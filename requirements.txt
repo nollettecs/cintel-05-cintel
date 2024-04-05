@@ -7,3 +7,4 @@ shiny
 shinylive
 shinywidgets
 shinyswatch
+ipyleaflet
